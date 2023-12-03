@@ -1,3 +1,4 @@
+// Add eventLstener which allows to play animal sounds by keyword
 
 document.addEventListener("keydown", function(event) {
     var actionKey = event.key;
@@ -5,18 +6,12 @@ document.addEventListener("keydown", function(event) {
     pressed(actionKey);
     switch(event.key) {
         case "s":  
-            var squirrel = new Audio("./sounds/squirrel.mp3");
+            var squirrel = new Audio("./sounds/squirrel.mp4");
             squirrel.play();
-            setTimeout(function() {
-                squirrel.pause()
-            }, 1500);
             break;
         case "d":
-            var deer = new Audio("./sounds/deer.mp3");
+            var deer = new Audio("./sounds/deer.mp4");
             deer.play();
-            setTimeout(function() {
-                deer.pause()
-            }, 1500);
             break;
         case "m":
             var scream = new Audio("./sounds/scream.mp3");
@@ -37,6 +32,9 @@ document.addEventListener("keydown", function(event) {
     };
 });
 
+
+// Add eventLstener which allows to play animal sounds by click
+
 var animals = document.querySelectorAll(".animal");
 console.log(animals);
 
@@ -48,18 +46,12 @@ for(i=0; i<animals.length; i++) {
         console.log(this);
         switch(chosenButton.slice(number-2,number-1)) {
         case "s":  
-            var squirrel = new Audio("./sounds/squirrel.mp3");
+            var squirrel = new Audio("./sounds/squirrel.mp4");
             squirrel.play();
-            setTimeout(function() {
-                squirrel.pause()
-            }, 1500);
             break;
         case "d":
-            var deer = new Audio("./sounds/deer.mp3");
+            var deer = new Audio("./sounds/deer.mp4");
             deer.play();
-            setTimeout(function() {
-                deer.pause()
-            }, 1500);
             break;
         case "m":
             var scream = new Audio("./sounds/scream.mp3");
@@ -79,6 +71,8 @@ for(i=0; i<animals.length; i++) {
     };
     })
     };
+
+// Hovering the pressed animal icon   
 
 function pressed (element) {
     var pressedKey = document.querySelector("."+ element);
