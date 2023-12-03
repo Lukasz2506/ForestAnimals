@@ -1,4 +1,4 @@
-// Add eventLstener which allows to play animal sounds by keyword
+// Add eventLstener which allows to play animal noises by keyword
 
 document.addEventListener("keydown", function(event) {
     var actionKey = event.key;
