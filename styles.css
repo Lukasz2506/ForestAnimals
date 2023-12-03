@@ -2,15 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: rgb(229, 223, 212);
 }
 
 body {
-    background-color: forestgreen;
+    background-color: rgb(114, 140, 114);
     text-align: center;
 }
 
 .header {
-    color: antiquewhite;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -28,6 +28,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 50px 0;
 }
 
 .animal {
@@ -36,7 +37,6 @@ h2 {
     border-radius: 50%;
     font-weight: bold;
     font-size: 1.5rem;
-    color: azure;
     padding-top: 20px;
     text-shadow: 2px 2px 1px green;
     
@@ -68,10 +68,11 @@ h2 {
 
 footer{
 
-    background-color: darkgreen;
+    background-color: rgb(52, 84, 52);
     text-align: center;
     margin-bottom: 0;
     height: 100px;
+    
 }
 
 footer > p {
@@ -79,11 +80,25 @@ footer > p {
 }
 
 .pressed {
-    box-shadow: 0 6px 8px 0 red;
+    box-shadow: 0 6px 8px 0 rgb(190, 94, 94)(237, 157, 157);
     opacity: 0.6;
 }
 
 @media (max-width: 600px) {
+    h1 {
+        font-size: 300%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    .header {
+        margin-top: 50px;
+        height: 200px;
+    }
+    .header * {
+        width: 80%;
+        margin: 0 auto;
+    }
     .animals {
         flex-direction: column;
         gap: 30px;
